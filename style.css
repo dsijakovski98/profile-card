@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: hsl(185, 75%, 39%);
+    overflow: hidden;
+}
+
+
+/* BACKGROUND */
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* z-index: -1; */
+}
+
+.bubble {
+    position: absolute;
+}
+.bubble img {
+    opacity: .8;
+}
+
+.bubble-up {
+    top: 0;
+    left: 0;
+    transform: translate(-40%, -50%);
+}
+.bubble-down {
+    right: 0;
+    bottom: 0;
+    transform: translate(20%, 65%);
+}
+
+
+/* CARD */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    background: white;
+
+    border-radius: 1em;
+    overflow: hidden;
+
+    box-shadow: 0px 0px 50px hsl(0, 0%, 59%);
+
+    display: grid;
+    grid-template-rows: 1fr 1fr .5fr;
+}
+
+.card-media {
+    width: 100%;
+    position: relative;
+}
+.card-media-bg {
+    width: 100%;
+}
+.card-media-profile {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+.card-profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1em;
+    padding: 1.5em;
+    color: hsl(229, 23%, 23%);
+
+}
+
+.card-profile-name {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: .5em;
+}
+
+.profile-name {
+    font-size: 1.2rem;
+}
+.profile-age {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.profile-city {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.card-details {
+    border-top: 1px solid hsl(0, 0%, 85%);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5em;
+
+    text-align: center;
+    color: hsl(229, 23%, 23%);
+}
+
+.details-value {
+    font-size: 1.2rem;
+    margin-bottom: 0.4em;
+}
+.details-name {
+    font-size: .7rem;
+    letter-spacing: 1.5px;
+}
+
+
+@media screen and (max-width: 500px) {
+    .card-container {
+        width: 90%;
+    }
+
+    .card-profile-info {
+        padding: 1em;
+        gap: 0.5em;
+    }
+}
